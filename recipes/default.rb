@@ -17,7 +17,7 @@ node['oh_my_zsh']['users'].each do |user_hash|
   end
 
   git "#{home_directory}/.oh-my-zsh" do
-    #repository node['oh_my_zsh'][:repository]
+    repository node['oh_my_zsh'][:repository]
     user user_hash[:login]
     reference "master"
     action :sync
