@@ -35,6 +35,13 @@ node['oh_my_zsh']['users'].each do |user_hash|
       :plugins => user_hash[:plugins] || %w(git)
     })
   end
+  
+  template "#{home_directory}/.zshrc.local" do
+    source "zshrc.local.erb"
+    owner user_hash[:login]
+    mode "644"
+    action :create_if_missing
+  end
 
   user user_hash[:login] do
     action :modify
