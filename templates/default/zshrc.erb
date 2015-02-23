@@ -36,8 +36,6 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(<%= @plugins.join(' ') %>)
 
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 
 # Tmux
@@ -103,3 +101,5 @@ alias zshrc="vim ~/.zshrc.local"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto --exclude="*~"'
+
+source $ZSH/oh-my-zsh.sh
